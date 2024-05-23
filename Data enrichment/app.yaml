@@ -11,6 +11,11 @@ variables:
     description: Name of the output topic to write to.
     defaultValue: enriched-data
     required: false
+  - name: redis_host
+    inputType: FreeText
+    description: ''
+    defaultValue: ''
+    required: false
 dockerfile: dockerfile
 runEntryPoint: main.py
 defaultFile: main.py
