@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Initialize Quix application
-app = Application("transformation-v1", auto_offset_reset="earliest")
+app = Application(consumer_group="transformation-v1", auto_offset_reset="earliest")
 
 # Get input and output topics from environment variables
 input_topic = app.topic(os.environ["input"])
