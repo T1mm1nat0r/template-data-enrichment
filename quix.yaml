@@ -75,6 +75,35 @@ deployments:
         description: ''
         required: true
         secretKey: redis_password
+  - name: Lookup data ingestion
+    application: Lookup data ingestion
+    deploymentType: Job
+    version: latest
+    resources:
+      cpu: 200
+      memory: 500
+      replicas: 1
+    variables:
+      - name: redis_host
+        inputType: FreeText
+        description: ''
+        required: true
+        value: redis-18174.c304.europe-west1-2.gce.redns.redis-cloud.com
+      - name: redis_port
+        inputType: FreeText
+        description: ''
+        required: true
+        value: 18174
+      - name: redis_username
+        inputType: FreeText
+        description: ''
+        required: false
+        value: default
+      - name: redis_password
+        inputType: Secret
+        description: ''
+        required: false
+        secretKey: redis_password
 
 # This section describes the Topics of the data pipeline
 topics:
