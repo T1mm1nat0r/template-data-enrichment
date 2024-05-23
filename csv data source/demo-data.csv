@@ -1,0 +1,21 @@
+Timestamp,Device Name,Temperature,Humidity,Mode,Fan,Heater,Cooler
+2024-04-12 13:26:00,Greenhouse Temperature Sensor,28,59,Cool,Off,On Low,On Low
+2024-04-12 2:40:00,Windmill Controller,-,-,Off,Off,Off,Off
+2024-04-12 17:48:00,Olivine Grove Irrigation,-,-,Auto,On High,Off,Off
+2024-04-12 23:3:00,Coop Temperature Sensor,12,68,Off,On High,Off,Off
+2024-04-12 19:21:00,Windmill Controller,-,-,Auto,On Low,Off,Off
+2024-04-12 10:11:00,Coop Temperature Sensor,31,60,Cool,Off,On Low,On Low
+2024-04-12 22:15:00,Barn Temperature Sensor,14,83,Auto,On Low,Off,Off
+2024-04-12 3:47:00,Barn Temperature Sensor,21,55,Auto,On Low,Off,Off
+2024-04-12 4:38:00,Greenhouse Temperature Sensor,22,80,Cool,On High,On Low,On Low
+2024-04-12 14:42:00,Vineyard Irrigation,-,-,Auto,On Low,Off,Off
+2024-04-12 8:29:00,Greenhouse Temperature Sensor,11,62,Heat,On Low,On Low,On Low
+2024-04-12 0:25:00,Rice Paddy Water Management,23,83,Heat,Off,On Low,On Low
+2024-04-12 7:51:00,Coop Temperature Sensor,29,83,Cool,Off,On Low,On Low
+2024-04-12 4:5:00,Cattle Shed Temperature Sensor,34,87,Auto,On High,Off,Off
+2024-04-12 10:25:00,Greenhouse Temperature Sensor,22,57,Off,On Low,Off,Off
+2024-04-12 22:47:00,Greenhouse Temperature Sensor,12,90,Auto,Off,Off,Off
+2024-04-12 23:53:00,Cattle Shed Temperature Sensor,25,81,Auto,On High,Off,Off
+2024-04-12 7:25:00,Sheep Farm Shelter,20,61,Heat,On Low,On Low,On Low
+2024-04-12 19:7:00,Coop Temperature Sensor,35,68,Cool,On High,On Low,On Low
+2024-04-12 10:41:00,Windmill Controller,-,-,Auto,On High,Off,Off
