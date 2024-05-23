@@ -24,7 +24,7 @@ variables:
   - name: redis_username
     inputType: FreeText
     description: ''
-    defaultValue: ''
+    defaultValue: default
     required: false
   - name: redis_password
     inputType: Secret
