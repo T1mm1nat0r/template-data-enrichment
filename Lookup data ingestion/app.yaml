@@ -1,6 +1,11 @@
 name: Lookup data ingestion
 language: Python
-variables: []
+variables:
+  - name: redis_host
+    inputType: FreeText
+    description: ''
+    defaultValue: redis-18174.c304.europe-west1-2.gce.redns.redis-cloud.com
+    required: false
 dockerfile: dockerfile
 runEntryPoint: main.py
 defaultFile: main.py
