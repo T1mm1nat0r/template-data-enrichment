@@ -19,7 +19,7 @@ variables:
   - name: redis_port
     inputType: FreeText
     description: ''
-    defaultValue: ''
+    defaultValue: 18174
     required: false
   - name: redis_username
     inputType: FreeText
