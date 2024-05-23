@@ -6,6 +6,11 @@ variables:
     description: ''
     defaultValue: redis-18174.c304.europe-west1-2.gce.redns.redis-cloud.com
     required: true
+  - name: redis_port
+    inputType: FreeText
+    description: ''
+    defaultValue: 18174
+    required: true
 dockerfile: dockerfile
 runEntryPoint: main.py
 defaultFile: main.py
