@@ -73,9 +73,7 @@ def main():
     # Producer is already setup to use Quix brokers.
     # It will also ensure that the topics exist before producing to them if
     # Application.Quix is initiliazed with "auto_create_topics=True".
-    producer = app.get_producer()
-
-    with producer:
+    with app.get_producer() as producer:
         # Iterate over the data from CSV file
         # read_csv_file will be implemented further down
         for message_key, row_data in read_csv_file(file_path=csv_file_path):
