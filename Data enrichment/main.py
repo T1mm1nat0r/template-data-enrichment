@@ -2,10 +2,6 @@ import os
 from quixstreams import Application
 import redis
 
-# Load environment variables (assuming .env file exists)
-from dotenv import load_dotenv
-load_dotenv()
-
 # Initialize Quix application
 app = Application(consumer_group="transformation-v1", auto_offset_reset="earliest")
 
