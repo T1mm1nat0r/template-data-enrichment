@@ -13,18 +13,13 @@ load_dotenv()
 
 # Create an Application
 app = Application(consumer_group="csv_sample", auto_create_topics=True)
-# Define a serializer for messages, using JSON Serializer for ease
-serializer = JSONSerializer()
 
 # Define the topic using the "output" environment variable
-topic_name = os.environ["output"]
-topic = app.topic(topic_name)
+topic = app.topic(name=os.environ["output"], value_serializer="json"))
 
-# Get the directory of the current script
+# Get the directory of the current script and construct the path to the CSV file
 script_dir = os.path.dirname(os.path.realpath(__file__))
-# Construct the path to the CSV file
 csv_file_path = os.path.join(script_dir, "demo-data.csv")
-
 
 # this function loads the file and sends each row to the publisher
 def read_csv_file(file_path: str):
