@@ -14,16 +14,15 @@ def ingest_csv_data():
   # Write each row into the database
     for index, row in df.iterrows():
         # Convert row to a dictionary
-        message = row.to_dict()
-        message["timestamp"] = int(time.time_ns())  # Add a timestamp
-        # Produce the message to the topic
+        entry = row.to_dict()
+        entry["timestamp"] = int(time.time_ns())  # Add a timestamp
         key = f'sensor:{row["name"]}'
         pipe.delete(key)
         pipe.hset(key, 'lat', row['latitude'])
         pipe.hset(key, 'long', row['longitude'])
         pipe.hset(key, 'local_time', row['local_time'])
 
-        print(pipe.execute(), row, message)
+        print(pipe.execute(), row, entry)
 
         print(row["name"]);
 
