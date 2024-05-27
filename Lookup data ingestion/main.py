@@ -2,8 +2,6 @@ import pandas as pd
 import os
 import time
 import redis
-from dotenv import load_dotenv
-load_dotenv()
 
 # Function to ingest data from a CSV file
 def ingest_csv_data():
