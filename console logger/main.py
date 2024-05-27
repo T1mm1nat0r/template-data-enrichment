@@ -1,16 +1,10 @@
 import os
 
-# import our get_app function to help with building the app for local/Quix deployed code
-from app_factory import get_app
-
-# get the environment variable value or default to False
-USE_LOCAL_KAFKA = os.getenv("use_local_kafka", False)
-
 # Create an Application.
-app = get_app(consumer_group="my-first-consumer-group", use_local_kafka=USE_LOCAL_KAFKA)
+app = Application(consumer_group="my-first-consumer-group", auto_offset_reset="earliest")
 
 # create the input topic object and use a JSON deserializer
-input_topic = app.topic(os.environ["input"])
+input_topic = app.topic(name=os.environ["input"], value_serializer="json")
 
 sdf = app.dataframe(input_topic)
 
