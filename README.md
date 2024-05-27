@@ -1,17 +1,11 @@
-# Hello Quix template
+# Data enrichment template
 
 This basic template contains:
 
 A real time data processing pipeline with these services:
 
- - CSV data source - A continuously looping data source containing timestamp, number and name.
- - Name counter - In this stateful service we count the number of times we encounter each name from the CSV data.
+ - Lookup data ingestion - a one-time job that ingests CSV data into a Redis database.
+ - CSV data source - A continuously looping data source containing mock sensor data.
+ - Data enrichment - Performs a real-time lookup on Redis data for each processed message and appends the extra data to the message.
  - Console logger - This destination service simply logs the data being recieved to the console. Adapt it to suit your needs.
 
-We have also included a `docker-compose.yml` file so you can run the whole pipeline locally, including the message broker.
-
-# Running Locally
-
-```sh
-docker compose up --build
-```
