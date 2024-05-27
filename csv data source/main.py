@@ -12,6 +12,8 @@ app = Application(consumer_group="csv_sample", auto_create_topics=True)
 
 # Define the topic using the "output" environment variable
 topic = app.topic(name=os.environ["output"], value_serializer="json")
+# Define a serializer for messages, using JSON Serializer for ease
+serializer = JSONSerializer()
 
 # Get the directory of the current script and construct the path to the CSV file
 script_dir = os.path.dirname(os.path.realpath(__file__))
