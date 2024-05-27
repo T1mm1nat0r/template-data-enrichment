@@ -1,4 +1,5 @@
 import os
+from quixstreams import Application
 
 # Create an Application.
 app = Application(consumer_group="my-first-consumer-group", auto_offset_reset="earliest")
