@@ -8,8 +8,8 @@ metadata:
 deployments:
   - name: CSV data source
     application: csv data source
-    deploymentType: Service
     version: latest
+    deploymentType: Service
     resources:
       cpu: 200
       memory: 500
@@ -23,8 +23,8 @@ deployments:
         value: csv-data
   - name: Console logger
     application: console logger
-    deploymentType: Service
     version: latest
+    deploymentType: Service
     resources:
       cpu: 200
       memory: 500
@@ -38,8 +38,8 @@ deployments:
         value: enriched-data
   - name: Data enrichment
     application: Data enrichment
-    deploymentType: Service
     version: latest
+    deploymentType: Service
     resources:
       cpu: 200
       memory: 500
@@ -63,22 +63,23 @@ deployments:
       - name: redis_port
         inputType: FreeText
         description: ''
-        required: false
+        required: true
         value: 18174
       - name: redis_username
         inputType: FreeText
         description: ''
-        required: false
-        value: default
+        required: true
+        value: update me
       - name: redis_password
-        inputType: Secret
+        inputType: FreeText
         description: ''
         required: true
+        value: update me
         secretKey: redis_password
   - name: Lookup data ingestion
     application: Lookup data ingestion
-    deploymentType: Job
     version: latest
+    deploymentType: Job
     resources:
       cpu: 200
       memory: 500
@@ -97,12 +98,13 @@ deployments:
       - name: redis_username
         inputType: FreeText
         description: ''
-        required: false
-        value: default
+        required: true
+        value: update me
       - name: redis_password
-        inputType: Secret
+        inputType: FreeText
         description: ''
-        required: false
+        required: true
+        value: update me
         secretKey: redis_password
 
 # This section describes the Topics of the data pipeline

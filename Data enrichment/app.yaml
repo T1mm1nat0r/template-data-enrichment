@@ -20,16 +20,16 @@ variables:
     inputType: FreeText
     description: ''
     defaultValue: 18174
-    required: false
+    required: true
   - name: redis_username
     inputType: FreeText
     description: ''
-    defaultValue: default
-    required: false
+    defaultValue: 'update me'
+    required: true
   - name: redis_password
-    inputType: Secret
+    inputType: FreeText
     description: ''
-    defaultValue: redis_password
+    defaultValue: 'update me'
     required: true
 dockerfile: dockerfile
 runEntryPoint: main.py
