@@ -88,12 +88,12 @@ deployments:
         inputType: FreeText
         description: ''
         required: true
-        value: redis-18174.c304.europe-west1-2.gce.redns.redis-cloud.com
+        value: redis-10330.c135.eu-central-1-1.ec2.redns.redis-cloud.com
       - name: redis_port
         inputType: FreeText
         description: ''
         required: true
-        value: 18174
+        value: 10330
       - name: redis_username
         inputType: FreeText
         description: ''
