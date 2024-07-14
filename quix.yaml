@@ -8,8 +8,8 @@ metadata:
 deployments:
   - name: CSV data source
     application: csv data source
-    deploymentType: Service
     version: latest
+    deploymentType: Service
     resources:
       cpu: 200
       memory: 500
@@ -23,8 +23,8 @@ deployments:
         value: csv-data
   - name: Console logger
     application: console logger
-    deploymentType: Service
     version: latest
+    deploymentType: Service
     resources:
       cpu: 200
       memory: 500
@@ -38,8 +38,8 @@ deployments:
         value: enriched-data
   - name: Data enrichment
     application: Data enrichment
-    deploymentType: Service
     version: latest
+    deploymentType: Service
     resources:
       cpu: 200
       memory: 500
@@ -59,12 +59,12 @@ deployments:
         inputType: FreeText
         description: ''
         required: true
-        value: redis-18174.c304.europe-west1-2.gce.redns.redis-cloud.com
+        value: redis-10330.c135.eu-central-1-1.ec2.redns.redis-cloud.com
       - name: redis_port
         inputType: FreeText
         description: ''
         required: false
-        value: 18174
+        value: 10330
       - name: redis_username
         inputType: FreeText
         description: ''
@@ -77,8 +77,8 @@ deployments:
         secretKey: redis_password
   - name: Lookup data ingestion
     application: Lookup data ingestion
-    deploymentType: Job
     version: latest
+    deploymentType: Job
     resources:
       cpu: 200
       memory: 500
@@ -108,6 +108,4 @@ deployments:
 # This section describes the Topics of the data pipeline
 topics:
   - name: enriched-data
-    persisted: false
   - name: csv-data
-    persisted: false
